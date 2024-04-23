@@ -18,9 +18,10 @@ const User = () => {
              
                 const remaining = user.filter(use => use._id !== _id)
                 setUser(remaining)
-                alert('accounte deleted successfully')
+
                
             }
+          
          
         }
             
@@ -31,10 +32,10 @@ const User = () => {
     }
     return (
         <div>
-            <h1>user: {useLoader.length}</h1>
+            <h1>user: {user.length}</h1>
             <div>
                 {
-                    useLoader.map(u=> <div key={u._id}>
+                    user.map(u=> <div key={u._id}>
                            <p > {u.name}: {u.email} {u._id} 
                            <Link to={`/update/${u._id}`}>
                             <button>Update</button>
